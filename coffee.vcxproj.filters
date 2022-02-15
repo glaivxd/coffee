@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\utility\process\process.cpp" />
+    <ClCompile Include="src\sdk\engine\engine.cpp" />
+    <ClCompile Include="src\sdk\entity\entity.cpp" />
+    <ClCompile Include="src\features\chams.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\utility\process\process.hpp" />
+    <ClInclude Include="src\sdk\engine\engine.hpp" />
+    <ClInclude Include="src\sdk\entity\entity.hpp" />
+    <ClInclude Include="src\sdk\offsets.hpp" />
+    <ClInclude Include="src\sdk\sign_on_state.hpp" />
+    <ClInclude Include="src\sdk\class_id.hpp" />
+    <ClInclude Include="src\features\features.hpp" />
+  </ItemGroup>
+</Project>
