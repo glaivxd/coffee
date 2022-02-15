@@ -27,7 +27,7 @@ void Features::chams(Color rgb, float brightness, bool health_based)
 			{
 				auto entity = Engine::get_entity(i);
 
-				// Balance viewmodel brightness
+				// Balance viewmodel brightness, sadly you cannot change the glowing part of arms
 				if (entity.type() == ClassID::CPredictedViewModel)
 				{
 					process.write<int>(entity.self + 0x70, 25);
@@ -35,6 +35,13 @@ void Features::chams(Color rgb, float brightness, bool health_based)
 					process.write<int>(entity.self + 0x72, 25);
 				}
 
+				// :)
+				if (entity.type() == ClassID::CChicken)
+				{
+					process.write<int>(entity.self + 0x70, 25);
+					process.write<int>(entity.self + 0x71, 25);
+					process.write<int>(entity.self + 0x72, 25);
+				}
 
 				if (entity.valid())
 				{
