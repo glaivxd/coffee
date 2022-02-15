@@ -39,5 +39,5 @@ Entity Engine::get_entity(uint32_t index)
 
 Entity Engine::get_local_player()
 {
-	return process.read<Entity>(client_state + Signatures::dwClientState_GetLocalPlayer);
+	return process.read<Entity>(client + Signatures::dwLocalPlayer);
 }

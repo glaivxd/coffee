@@ -1,4 +1,4 @@
-										#pragma once
+#pragma once
 
 // sv_dump_class_info
 enum class ClassID

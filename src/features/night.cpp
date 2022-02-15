@@ -20,8 +20,8 @@ void Features::night()
 					process.write<bool>(entity.self + Netvars::m_bUseCustomAutoExposureMin, true);
 					process.write<bool>(entity.self + Netvars::m_bUseCustomAutoExposureMax, true);
 
-					process.write<float>(entity.self + Netvars::m_flCustomAutoExposureMin, 0.70f);
-					process.write<float>(entity.self + Netvars::m_flCustomAutoExposureMax, 0.70f);
+					process.write<float>(entity.self + Netvars::m_flCustomAutoExposureMin, 0.75f);
+					process.write<float>(entity.self + Netvars::m_flCustomAutoExposureMax, 0.75f);
 				}
 			}
 		}

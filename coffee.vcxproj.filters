@@ -16,5 +16,6 @@
     <ClInclude Include="src\sdk\sign_on_state.hpp" />
     <ClInclude Include="src\sdk\class_id.hpp" />
     <ClInclude Include="src\features\features.hpp" />
+    <ClInclude Include="src\sdk\color.hpp" />
   </ItemGroup>
 </Project>

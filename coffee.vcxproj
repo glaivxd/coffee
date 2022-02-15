@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\features\features.hpp" />
+    <ClInclude Include="src\sdk\color.hpp" />
     <ClInclude Include="src\sdk\offsets.hpp" />
     <ClInclude Include="src\sdk\class_id.hpp" />
     <ClInclude Include="src\sdk\engine\engine.hpp" />
