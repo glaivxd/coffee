@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "engine.hpp"
 #include "../../utility/process/process.hpp"
 #include "../offsets.hpp"
@@ -17,12 +15,13 @@ bool Engine::initialize()
 	}
 
 	client_state = process.read<uint32_t>(engine + Signatures::dwClientState);
+
 	return true;
 }
 
 bool Engine::in_game()
 {
-	if (process.read<SignOnState>(client_state + Signatures::dwClientState_State) != SignOnState::CONNECTED)
+	if (process.read<SignOnState>(client_state + Signatures::dwClientState_State) != SignOnState::IN_GAME)
 		return false;
 
 	return true;
@@ -40,5 +39,5 @@ Entity Engine::get_entity(uint32_t index)
 
 Entity Engine::get_local_player()
 {
-	return process.read<Entity>(client + Signatures::dwLocalPlayer);
+	return process.read<Entity>(client_state + Signatures::dwClientState_GetLocalPlayer);
 }

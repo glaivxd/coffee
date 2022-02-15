@@ -12,4 +12,5 @@ public:
 	bool valid();
 	int health();
 	ClassID type();
+	int team();
 };

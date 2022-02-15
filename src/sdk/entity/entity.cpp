@@ -24,3 +24,8 @@ ClassID Entity::type()
 
 	return id;
 }
+
+int Entity::team()
+{
+	return process.read<int>(self + Netvars::m_iTeamNum);
+}

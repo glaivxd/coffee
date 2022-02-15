@@ -1,13 +1,12 @@
 #pragma once
 
-enum class SignOnState
-{
-    NONE = 0,
-    CHALLENGE = 1,
-    CONNECTED = 2,
-    NEW = 3,
-    PRESPAWN = 4,
-    SPAWN = 5,
-    FULL = 6,
-    CHANGELEVEL = 7,
+enum class SignOnState {
+    MAIN_MENU,
+    CHALLENGE,
+    CONNECTED,
+    NEW,
+    PRE_SPAWN,
+    SPAWN,
+    IN_GAME,
+    CHANGE_LEVEL,
 };

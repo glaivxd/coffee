@@ -6,6 +6,7 @@
     <ClCompile Include="src\sdk\engine\engine.cpp" />
     <ClCompile Include="src\sdk\entity\entity.cpp" />
     <ClCompile Include="src\features\chams.cpp" />
+    <ClCompile Include="src\features\night.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utility\process\process.hpp" />

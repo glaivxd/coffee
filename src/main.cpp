@@ -16,8 +16,10 @@ int main()
 	std::cout << "Initialized" << std::endl;
 
 	std::thread chams_thread(Features::chams);
+	std::thread night_thread(Features::night);
 	
 	chams_thread.detach();
+	night_thread.detach();
 
 	// exit key
 	while (!GetAsyncKeyState(VK_F1))

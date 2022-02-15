@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\features\chams.cpp" />
+    <ClCompile Include="src\features\night.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\sdk\engine\engine.cpp" />
     <ClCompile Include="src\sdk\entity\entity.cpp" />
