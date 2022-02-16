@@ -1,7 +1,6 @@
 <h1 align="center"><code>coffee</code></h1>
 
-barebones csgo external cheat
-
-windows only, codebase is pretty ugly
+windows only external cheat, i wouldn't recommend learning off this as the code is very bad\n
+only features right now are chams and nightmode
 
 ![Screenshot](ss.png)
