@@ -9,11 +9,25 @@
 void Features::chams(Color rgb, float brightness, bool health_based)
 {
 	// write a cvar class af
-	int thisPtr = (int)(Engine::engine + Signatures::model_ambient_min - 0x2c);
-	int xored = *(int*)&brightness ^ thisPtr;
-	process.write<int>(Engine::engine + Signatures::model_ambient_min, xored);
-
+	const auto _this = static_cast<std::uintptr_t>(Engine::engine + Signatures::model_ambient_min - 0x2c);
+	process.write<std::int32_t>(Engine::engine + Signatures::model_ambient_min, *reinterpret_cast<std::uintptr_t*>(&brightness) ^ _this);
 	auto local = Engine::get_local_player();
+
+	struct ClRender {
+		float r;
+		float g;
+		float b;
+	};
+
+	ClRender balance;
+	balance.r = 25;
+	balance.g = 25;
+	balance.b = 25;
+
+	ClRender color;
+	color.r = rgb.r;
+	color.g = rgb.g;
+	color.b = rgb.b;
 
 	while (1)
 	{
@@ -29,20 +43,13 @@ void Features::chams(Color rgb, float brightness, bool health_based)
 
 				// Balance viewmodel brightness, sadly you cannot change the glowing part of arms
 				if (entity.type() == ClassID::CPredictedViewModel)
-				{
-					process.write<int>(entity.self + 0x70, 25);
-					process.write<int>(entity.self + 0x71, 25);
-					process.write<int>(entity.self + 0x72, 25);
-				}
+					process.write<ClRender>(entity.self + 0x70, balance);
 
 				// :)
 				if (entity.type() == ClassID::CChicken)
-				{
-					process.write<int>(entity.self + 0x70, 25);
-					process.write<int>(entity.self + 0x71, 25);
-					process.write<int>(entity.self + 0x72, 25);
-				}
+					process.write<ClRender>(entity.self + 0x70, color);
 
+				// worlds a fuck
 				if (entity.valid())
 				{
 					if (entity.team() != local.team())
