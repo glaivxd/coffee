@@ -15,7 +15,7 @@ int main()
 
 	std::cout << "Initialized" << std::endl;
 
-	std::thread chams_thread(Features::chams, red, 100, true);
+	std::thread chams_thread(Features::chams, red, 100);
 	std::thread night_thread(Features::night);
 	
 	chams_thread.detach();
