@@ -6,4 +6,6 @@ namespace Features
 {
 	void chams(Color rgb, float brightness);
 	void night();
+
+	void bhop();
 }

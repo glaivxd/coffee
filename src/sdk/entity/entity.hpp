@@ -13,4 +13,5 @@ public:
 	int health();
 	ClassID type();
 	int team();
+	int flags();
 };

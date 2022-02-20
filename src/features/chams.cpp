@@ -26,7 +26,7 @@ void Features::chams(Color rgb, float brightness)
 	{
 		if (Engine::in_game())
 		{
-			if (!local.valid())
+			if (!local.self)
 				local = Engine::get_local_player();
 
 			// Cant just loop player entities because we need CPredictedViewModel :|

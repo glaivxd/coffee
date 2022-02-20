@@ -17,9 +17,11 @@ int main()
 
 	std::thread chams_thread(Features::chams, red, 100);
 	std::thread night_thread(Features::night);
+	std::thread bhop_thread(Features::bhop);
 	
 	chams_thread.detach();
 	night_thread.detach();
+	bhop_thread.detach();
 
 	// exit key
 	while (!GetAsyncKeyState(VK_F1))

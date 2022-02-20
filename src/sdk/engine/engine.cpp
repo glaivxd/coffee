@@ -21,8 +21,8 @@ bool Engine::initialize()
 
 bool Engine::in_game()
 {
-	if (process.read<SignOnState>(client_state + Signatures::dwClientState_State) != SignOnState::IN_GAME)
-		return false;
+	//if (process.read<SignOnState>(client_state + Signatures::dwClientState_State) != SignOnState::IN_GAME)
+	//	return false;
 
 	return true;
 }

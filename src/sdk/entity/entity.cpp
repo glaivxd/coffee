@@ -29,3 +29,8 @@ int Entity::team()
 {
 	return process.read<int>(self + Netvars::m_iTeamNum);
 }
+
+int Entity::flags()
+{
+	return process.read<int>(self + Netvars::m_fFlags);
+}
