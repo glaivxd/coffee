@@ -2,6 +2,7 @@
 #include <iostream>
 #include <thread>
 
+#include "utility/process/process.hpp"
 #include "sdk/engine/engine.hpp"
 #include "features/features.hpp"
 
@@ -13,10 +14,12 @@ int main()
 	if (!Engine::initialize())
 		std::cout << "Failed to initialize" << std::endl;
 
-	std::thread chams_thread(Features::chams, 100);
+	std::thread glow_thread(Features::glow, ClrRender(255, 0, 0));
+	std::thread chams_thread(Features::chams, ClrRender(255, 0, 0), 100);
 	std::thread night_thread(Features::night, 0.75f);
 	std::thread bhop_thread(Features::bhop);
 	
+	glow_thread.detach();
 	chams_thread.detach();
 	night_thread.detach();
 	bhop_thread.detach();

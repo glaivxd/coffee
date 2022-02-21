@@ -3,6 +3,16 @@
 class ClrRender
 {
 public:
+	ClrRender(unsigned char red, unsigned char green, unsigned char blue)
+	{
+		r = red;
+		g = green;
+		b = blue;
+	}
+
+	// extravagant balls
+	ClrRender() {};
+
 	unsigned char r, g, b;
 };
 

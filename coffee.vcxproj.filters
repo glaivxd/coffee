@@ -8,6 +8,7 @@
     <ClCompile Include="src\features\chams.cpp" />
     <ClCompile Include="src\features\night.cpp" />
     <ClCompile Include="src\features\bhop.cpp" />
+    <ClCompile Include="src\features\glow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utility\process\process.hpp" />

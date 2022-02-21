@@ -3,6 +3,7 @@
 #include <cstdint>
 
 #include "../enums.hpp"
+#include "../clrrender.hpp"
 
 class Entity
 {
@@ -14,4 +15,6 @@ public:
 	ClassID type();
 	int team();
 	int flags();
+
+	void glow();
 };

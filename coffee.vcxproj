@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="src\features\bhop.cpp" />
     <ClCompile Include="src\features\chams.cpp" />
+    <ClCompile Include="src\features\glow.cpp" />
     <ClCompile Include="src\features\night.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\sdk\engine\engine.cpp" />

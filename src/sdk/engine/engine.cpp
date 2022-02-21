@@ -15,6 +15,8 @@ bool Engine::initialize()
 	}
 
 	client_state = process.read<uint32_t>(engine + Signatures::dwClientState);
+	if (!client_state)
+		return false;
 
 	return true;
 }

@@ -4,6 +4,7 @@
 
 namespace Engine
 {
+	// initialize a bunch of things needed for hack to run
 	bool initialize();
 
 	bool in_game();
@@ -16,6 +17,6 @@ namespace Engine
 	inline uint32_t client;
 	inline uint32_t engine;
 
-	// not a module but j
+	// take a look at the goop
 	inline uint32_t client_state;
 }

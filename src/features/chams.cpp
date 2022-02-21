@@ -4,9 +4,8 @@
 #include "../sdk/engine/engine.hpp"
 #include "../utility/process/process.hpp"
 #include "../sdk/offsets.hpp"
-#include "../sdk/clrrender.hpp"
 
-void Features::chams(float brightness)
+void Features::chams(ClrRender color, float brightness)
 {
 	ClrRender balance;
 	balance.r = 255 / 10;
@@ -35,7 +34,7 @@ void Features::chams(float brightness)
 				auto entity = Engine::get_entity(i);
 
 				if (entity.team() != local.team())
-					process.write<ClrRender>(entity.self + Netvars::m_clrRender, Colors::green);
+					process.write<ClrRender>(entity.self + Netvars::m_clrRender, color);
 			}
 		}
 
