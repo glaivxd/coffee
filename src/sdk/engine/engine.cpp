@@ -1,7 +1,7 @@
 #include "engine.hpp"
 #include "../../utility/process/process.hpp"
 #include "../offsets.hpp"
-#include "../sign_on_state.hpp"
+#include "../enums.hpp"
 
 bool Engine::initialize()
 {
@@ -21,8 +21,8 @@ bool Engine::initialize()
 
 bool Engine::in_game()
 {
-	//if (process.read<SignOnState>(client_state + Signatures::dwClientState_State) != SignOnState::IN_GAME)
-	//	return false;
+	if (process.read<SignOnState>(client_state + Signatures::dwClientState_State) != SignOnState::IN_GAME)
+		return false;
 
 	return true;
 }

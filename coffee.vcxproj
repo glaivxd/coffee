@@ -150,12 +150,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\features\features.hpp" />
-    <ClInclude Include="src\sdk\color.hpp" />
+    <ClInclude Include="src\sdk\clrrender.hpp" />
+    <ClInclude Include="src\sdk\enums.hpp" />
     <ClInclude Include="src\sdk\offsets.hpp" />
-    <ClInclude Include="src\sdk\class_id.hpp" />
     <ClInclude Include="src\sdk\engine\engine.hpp" />
     <ClInclude Include="src\sdk\entity\entity.hpp" />
-    <ClInclude Include="src\sdk\sign_on_state.hpp" />
     <ClInclude Include="src\utility\process\process.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

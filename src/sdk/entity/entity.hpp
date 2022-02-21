@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-#include "../class_id.hpp"
+#include "../enums.hpp"
 
 class Entity
 {

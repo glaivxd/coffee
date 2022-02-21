@@ -17,11 +17,10 @@ void Features::bhop()
 			if (!local.self)
 				local = Engine::get_local_player();
 
-
 			if (GetAsyncKeyState(VK_SPACE))
 			{
-				//if (local.flags() & 1 == 1)
-				process.write<int>(local.self + Signatures::dwForceJump, 6);
+				if (local.flags() & 1)
+					process.write<int>(Engine::client + Signatures::dwForceJump, 6);
 			}
 		}
 
